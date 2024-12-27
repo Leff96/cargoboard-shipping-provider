@@ -1,6 +1,6 @@
 <?php
 
-namespace ShippingTutorial\Controllers;
+namespace CargoboardShipping\Controllers;
 
 use Plenty\Modules\Account\Address\Contracts\AddressRepositoryContract;
 use Plenty\Modules\Account\Address\Models\Address;
