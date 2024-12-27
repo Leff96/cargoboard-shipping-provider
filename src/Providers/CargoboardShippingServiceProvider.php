@@ -1,14 +1,14 @@
 <?php
-namespace ShippingTutorial\Providers;
+namespace CargoboardShipping\Providers;
 
 use Plenty\Modules\Order\Shipping\ServiceProvider\Services\ShippingServiceProviderService;
 use Plenty\Plugin\ServiceProvider;
 
 /**
- * Class ShippingTutorialServiceProvider
- * @package ShippingTutorial\Providers
+ * Class CargoboardShippingServiceProvider
+ * @package CargoboardShipping\Providers
  */
-class ShippingTutorialServiceProvider extends ServiceProvider
+class CargoboardShippingServiceProvider extends ServiceProvider
 {
 
 	/**
@@ -17,18 +17,18 @@ class ShippingTutorialServiceProvider extends ServiceProvider
 	public function register()
 	{
 	    // add REST routes by registering a RouteServiceProvider if necessary
-//	     $this->getApplication()->register(ShippingTutorialRouteServiceProvider::class);
+//	     $this->getApplication()->register(CargoboardShippingRouteServiceProvider::class);
     }
 
     public function boot(ShippingServiceProviderService $shippingServiceProviderService)
     {
 
         $shippingServiceProviderService->registerShippingProvider(
-            'ShippingTutorial',
+            'CargoboardShipping',
             ['de' => '*** Plenty shipping tutorial ***', 'en' => '*** Plenty shipping tutorial ***'],
             [
-                'ShippingTutorial\\Controllers\\ShippingController@registerShipments',
-                'ShippingTutorial\\Controllers\\ShippingController@deleteShipments',
+                'CargoboardShipping\\Controllers\\ShippingController@registerShipments',
+                'CargoboardShipping\\Controllers\\ShippingController@deleteShipments',
             ]);
     }
 }
